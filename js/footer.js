@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     orderDeadline: "전날 밤 12시까지",
     orderExtra: `
       <p class="order-info">
-       <img class="order-icon" src="../public/images/icon/error.png" alt="※">
+       <img class="order-icon" src="./public/images/icon/error.png" alt="※">
 
        <span class="order-text">
         <span>발열도시락만 <b>당일 오전 8시까지</b> 수정 가능</span>
@@ -36,12 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const snsLinks = [
     {
       href: "",
-      imgSrc: "/public/images/icon/naverblog_icon.svg",
+      imgSrc: "./public/images/icon/naverblog_icon.svg",
       alt: "네이버 블로그"
     },
     {
       href: "",
-      imgSrc: "/public/images/icon/instagram_icon.svg",
+      imgSrc: "./public/images/icon/instagram_icon.svg",
       alt: "인스타그램"
     },
   ];
