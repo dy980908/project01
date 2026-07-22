@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔽 푸터 텍스트 데이터
   const footerData = {
     callTitle: "고객센터",
-    callNumber: "1668-5596",
+    callNumber: "1234-5678",
     callTime: `
       <p class="foo_ext">평일 <span>08:00 - 18:00</span></p>
       <p class="foo_ext">토요일, 일요일, 공휴일 휴무</p>
