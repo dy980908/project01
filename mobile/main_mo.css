@@ -1,0 +1,1174 @@
+.lunch_group_mo {
+    display: none;
+}
+
+.section01_mobile {
+    display: none;
+}
+
+.lunch_group_img {
+    display: none;
+}
+
+.section2_p {
+    display: none;
+}
+
+.pro_txt_bold_mo {
+    display: none;
+}
+
+.qr_img {
+    display: block;
+}
+
+.qr_img img {
+    display: block;
+}
+
+.last_img {
+    display: none;
+}
+
+.last_img img {
+    display: none;
+}
+
+.title_last {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .section01 {
+        display: none;
+    }
+
+    /****** 정기 배달 도시락 section02 ******/
+    .section02 {
+        padding-bottom: 30px;
+    }
+
+    .section02 .sub_title {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        padding: 40PX 50px;
+        margin-bottom: -20px;
+    }
+
+    .lunch_group_box {
+        margin: 0 45px auto;
+        box-shadow: #ddd 0 2px 10px;
+        width: 90%;
+        overflow: hidden;
+        border-radius: 40px;
+        box-sizing: border-box;
+    }
+
+    .lunch_group_img {
+        display: block;
+        width: 100%;
+        height: 850px;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .lunch_group_box img {
+        width: 100%;
+    }
+
+    .lunch_group_wrap {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .ext_txt {
+        display: none;
+    }
+
+    /* 모바일/PC */
+    .lunch_group_pc {
+        display: none;
+    }
+
+    .lunch_group_mo {
+        display: block;
+    }
+
+    .lunch_group_wrap {
+        flex-direction: column;
+        height: 340px;
+    }
+
+    .lunch_group_mo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(170px, 24vw, 220px);
+        margin: 0;
+        padding: clamp(16px, 2.5vw, 24px) clamp(28px, 5vw, 50px);
+        box-sizing: border-box;
+    }
+
+    .lunch_group_left {
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+
+    .lunch_group_right {
+        display: flex;
+        align-items: center;
+        margin: 30px;
+        width: 9%;
+    }
+
+    .lunch_group_right img {
+        width: 80%;
+    }
+
+    /* 런치박스 이미지 스타일 */
+    .lunch_img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .lunch_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding-right: 50px;
+    }
+
+    .section02 .lunch_group_mo.salad .lunch_img {
+        padding-right: 20px;
+    }
+
+    /* 런치박스 텍스트 스타일 */
+    .lunch_text {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary-orange);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .section02 .lunch_group_mo.salad .lunch_text .lunch_tit {
+        margin-right: 32px;
+    }
+
+    .lunch_tit {
+        display: flex;
+    }
+
+    .lunch_tit img {
+        width: 26px;
+        height: 26px;
+        margin-left: 8px;
+    }
+
+    .lunch_price {
+        color: black;
+    }
+
+    .ext_txt {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+
+    /* 런치박스 텍스트 스타일 end */
+    .salad .lunch_tit span,
+    .salad .lunch_ext {
+        color: var(--primary-green);
+    }
+
+    .lunch_group a:hover {
+        border: 2px solid white;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .lunch_group_mo.salad {
+        border-top: 1.5px #ddd solid;
+    }
+
+    .salad a:hover {
+        border: 2px solid white;
+    }
+
+    .lunch_group a:hover .lunch_bg,
+    .salad a:hover .lunch_bg {
+        opacity: 1;
+    }
+
+    .salad:hover {
+        border: inherit;
+    }
+
+    /* 장바구니 hover */
+    .cart_link img {
+        content: url("../public/images/icon/cart.svg");
+        transition: 0.3s ease;
+    }
+
+    .cart_link:hover img {
+        content: url("../public/images/icon/cart_hover.svg");
+    }
+
+    .section2_p {
+        text-align: center;
+        padding-top: 30px;
+        color: #888;
+        display: block;
+    }
+
+    .section04 h1 {
+        display: none;
+    }
+
+    /****** 정기 배달 도시락 section02 end ******/
+
+    /****** section04 ******/
+    .section04 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 150px 0 0 0;
+    }
+
+    .black_bg {
+        background-color: #f2f2f5;
+    }
+
+    .background_img img {
+        display: none;
+    }
+
+    .logo_img {
+        display: none;
+    }
+
+    .section04 h1 {
+        display: block;
+        font-family: 'MalangmalangR';
+        font-size: 6rem;
+    }
+
+    .promotion_title p {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .section04 .logo_img {
+        width: 200px;
+        margin-bottom: 40px;
+    }
+
+    .section04 .logo_img img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .promotion_title {
+        grid-column: 1 / -1;
+        padding-left: 30px;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin: -60px 0 40px 0;
+        color: #30231B;
+    }
+
+    .section04 .promotion_point {
+        max-width: 100%;
+        display: grid;
+        align-items: stretch;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    .section04 .promotion_contents {
+        display: contents;
+    }
+
+    .section04 .promotion_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-height: 230px;
+        font-size: 1.4rem;
+        padding: 35px 40px;
+        box-sizing: border-box;
+    }
+
+    .section04 .promotion_box .pro_txt {
+        order: 1;
+    }
+
+    .section04 .promotion_box .pro_tit {
+        order: 2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    .section04 .pro_tit img {
+        width: 60px;
+        height: auto;
+        display: block;
+    }
+
+    .promotion_box:hover {
+        background-color: #FF5117;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .promotion_box:hover .pro_txt_bold_mo {
+        display: none;
+    }
+
+    .promotion_box:hover span {
+        display: none;
+    }
+
+    .promotion_box:hover .pro_txt_light {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+        height: 100%;
+        /* 박스 높이 안에서 꽉 차게 */
+        width: 100%;
+
+    }
+
+    .pro_txt .pro_txt_bold {
+        display: none;
+    }
+
+    .pro_txt_bold_mo {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: bold;
+        padding-bottom: 6px;
+    }
+
+    .pro_tit {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .pro_tit img {
+        width: 30px;
+        display: block;
+    }
+
+    .pro_txt_light {
+        display: none;
+        font-size: 2.3rem;
+    }
+
+    .section04_span {
+        display: none;
+    }
+
+    /****** section04 end ******/
+
+    /****** section05 ******/
+    .section05 {
+        padding: 40px 0;
+        background-color: var(--background-light);
+        width: 100%;
+        height: 100%;
+    }
+
+    .section05 .sub_title {
+        text-align: left;
+        padding: 0 30px;
+    }
+
+    .review_contents {
+        width: 1420px;
+        height: 400px;
+        margin: 0 auto;
+
+    }
+
+    #review_slide_wrap {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+    .review_slide_wrap {
+        display: flex;
+        width: max-content;
+    }
+
+    .review_slide {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        min-height: 300px;
+        padding-top: 0;
+    }
+
+    .review_slide .swiper-slide {
+        text-align: left;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-card {
+        display: block;
+        width: 100%;
+        height: 300px;
+        border-radius: 12px;
+        background: #ffffff;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .review-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e7e7e7;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-pic img {
+        width: 60%;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-id {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .review-date {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .review-image {
+        background-color: #ddd;
+        height: 140px;
+        overflow: hidden;
+    }
+
+    .review-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .review-text {
+        padding: 25px 12px;
+        font-size: 14px;
+        line-height: 1.5em;
+        height: 6em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .review_slide:hover {
+        animation-play-state: unset;
+    }
+
+    /****** section05 end ******/
+
+    /****** section06 ******/
+    .section06 {
+        height: auto;
+        padding: 0 30px 50px 30px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .section06 .title {
+        display: none !important;
+    }
+
+    .title_last {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 40px;
+        font-family: 'Hakgyoansim Allimjang TTF B';
+        color: var(--primary-orange);
+
+    }
+
+    .section06 .contact_box p {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+
+    .section06 .contact_box .title_explain {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .section06 .sub_title {
+        width: 100%;
+        margin: 0 auto !important;
+    }
+
+    .section06 .contact_box {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+
+    .contact_box {
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub_title {
+        width: 40%;
+        text-align: center;
+    }
+
+    .section06 .last_img img {
+        margin: 30px auto;
+        width: 35%;
+    }
+
+    .order_btn2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .order_btn2 a {
+        width: 160px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-orange);
+        border-radius: 100px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .qr_img {
+        display: none !important;
+    }
+
+    .qr_img img {
+        display: none !important;
+    }
+
+    .last_img {
+        display: block !important;
+    }
+
+    .last_img img {
+        display: block !important;
+    }
+
+    /****** section06 end ******/
+
+    /* pay */
+    .pay {
+        gap: 20px;
+    }
+
+    .pay_wrap {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .pay_wrap .pay_text {
+        font-size: 1.8rem;
+    }
+
+    /* pay end */
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+
+    /* pay */
+    .pay {
+        gap: 20px;
+    }
+
+    .pay_wrap {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .pay_wrap .pay_text {
+        font-size: 1.8rem;
+    }
+
+    /* pay end */
+    /****** section06 ******/
+    .section06 {
+        height: auto;
+        padding: 0 30px 50px 30px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .section06 .title {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .section06 .sub_title {
+        margin: 0 auto;
+    }
+
+    .section06 .contact_box {
+        display: block;
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+
+    .contact_box {
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub_title {
+        width: 40%;
+        text-align: center;
+    }
+
+    .section06 .last_img img {
+        margin: 30px auto;
+        width: 35%;
+    }
+
+    .order_btn2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .order_btn2 a {
+        width: 160px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-orange);
+        border-radius: 100px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    /* .section06 .qr_img {
+    width: 40%;
+    height: 200px;
+    margin-right: 0px;
+    padding: 0 30px 50px 30px;
+}
+
+.section06 .qr_img img {
+    width: 100%;
+    object-fit: contain;
+    transform: translateY(0px);
+} */
+    /****** section06 end ******/
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .promotion_box:hover {
+        transform: translateY(0px);
+        transition: all 0.3s;
+    }
+
+    .review_slide:hover {
+        animation-play-state: running;
+        /* 또는 기본값으로 재지정 */
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /****** section02 end******/
+    .section02 .sub_title {
+        padding: 30px;
+        margin-bottom: -30px;
+    }
+
+    .lunch_group_box {
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .lunch_group_mo {
+        column-gap: 8px;
+        padding-left: 0px;
+    }
+
+    .lunch_group_left {
+        display: grid;
+        grid-template-columns: clamp(96px, 28vw, 140px) 1fr;
+        align-items: center;
+        column-gap: 50px;
+        min-width: 0;
+    }
+
+    .lunch_img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lunch_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        padding-right: 0;
+    }
+
+    .lunch_text {
+        min-width: 0;
+        font-size: clamp(16px, 4.6vw, 22px);
+        line-height: 1.28;
+        word-break: keep-all;
+    }
+
+    .lunch_tit {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+        flex-wrap: nowrap;
+    }
+
+    .lunch_tit img {
+        flex: 0 0 auto;
+        width: clamp(18px, 5vw, 26px);
+        height: auto;
+    }
+
+    .lunch_tit_text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-width: 0;
+    }
+
+    .lunch_price {
+        font-size: clamp(16px, 4.4vw, 20px);
+    }
+
+    .ext_txt {
+        font-size: clamp(12px, 3.6vw, 14px);
+    }
+
+    .lunch_group_right {
+        flex: 0 0 clamp(48px, 12vw, 72px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .cart_link img {
+        width: clamp(28px, 7vw, 40px);
+        height: auto;
+        display: block;
+    }
+
+    /****** section02 end******/
+
+    /****** section04 ******/
+    .promotion_title {
+        text-align: center;
+    }
+
+    .promotion_title h1 {
+        font-size: 40px;
+    }
+
+    .section04 .pro_txt_bold_mo {
+        font-size: 2.3rem;
+        padding-bottom: 20px;
+    }
+
+    .section04 .pro_txt_light {
+        font-size: 1.8rem;
+    }
+
+
+    .section04 .promotion_point {
+        padding: 30px;
+    }
+
+    .section04 .promotion_box {
+        width: 100%;
+        max-height: 200px;
+        padding: 30px 25px;
+    }
+
+    .section04 .pro_tit img {
+        width: 40px;
+    }
+
+    /****** section04 end ******/
+
+    /****** section05 ******/
+    .train-card {
+        --s: 0.7;
+    }
+
+    .slide-track {
+        gap: 16px;
+    }
+
+    /****** section05 end ******/
+
+    .section06 .contact_box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .title_last {
+        font-size: 30px;
+    }
+
+    .section06 .contact_box p {
+        font-size: 25px;
+    }
+
+    .section06 .contact_box .title_explain {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+
+
+
+    .qr_img {
+        display: none;
+    }
+
+    .order_btn2 {
+        display: block;
+    }
+
+    .order_btn2 a {
+        width: 160px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-orange);
+        border-radius: 100px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    /****** section06 end ******/
+
+}
+
+@media (max-width: 470px) {
+
+    /****** section02 ******/
+    .section02 .lunch_group_mo {
+        display: flex !important;
+        align-items: center !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_group_left {
+        display: grid !important;
+        grid-template-columns: minmax(120px, 28vw) 1fr !important;
+        column-gap: 12px !important;
+        align-items: center !important;
+        min-width: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_img {
+        width: 100% !important;
+        aspect-ratio: 4 / 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        transform: none !important;
+        float: none !important;
+        overflow: hidden !important;
+    }
+
+    .section02 .lunch_group_mo.salad .lunch_img {
+        padding-right: 0px !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_img img {
+        width: 90% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_text {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 2px !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_tit,
+    .section02 .lunch_group_mo .lunch_price,
+    .section02 .lunch_group_mo .ext_txt {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_tit img {
+        display: none !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_group_right {
+        flex: 0 0 48px !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .section02 .lunch_group_mo .cart_link img {
+        width: 26px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /****** section02 end******/
+
+    /****** section04 ******/
+    .promotion_title {
+        padding-right: 30px;
+    }
+
+    .promotion_title p {
+        white-space: nowrap;
+    }
+
+    .promotion_title p b {
+        display: block;
+    }
+
+    .section04 .pro_txt_bold_mo {
+        font-size: 2rem;
+    }
+
+
+    /****** section04 ******/
+    .section04 .pro_txt_bold_mo {
+        font-size: 1.7rem;
+        padding-bottom: 20px;
+    }
+
+    .section04 .pro_txt_light {
+        font-size: 1.5rem;
+    }
+
+    .section04 .promotion_point {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .section04 .promotion_box {
+        width: 100%;
+        max-height: 160px;
+        padding: 20px 15px;
+        margin: 0 auto;
+    }
+
+    .section04 .pro_tit img {
+        width: 37px;
+        padding-top: 10px;
+    }
+
+    /****** section04 end ******/
+
+    /****** 슬라이드 section05 ******/
+    .train-card {
+        font-size: 16px;
+    }
+
+    .train-card * {
+        font-size: 16px !important;
+        line-height: 1.4;
+        overflow: hidden;
+    }
+
+    .card_mid p {
+        font-size: 16px !important;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card_bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        position: relative;
+        gap: 5px;
+    }
+
+    .card_bottom::after {
+        content: "…";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 6px;
+        background: linear-gradient(to right, transparent, #fff 60%);
+    }
+
+    .card_btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    /****** 슬라이드 section05 end******/
+
+    /****** section06  ******/
+    .title_last {
+        font-size: 29px;
+        margin-bottom: 10PX;
+    }
+
+    .section06 .contact_box p {
+        font-size: 22px;
+    }
+
+    .section06 .contact_box .title_explain {
+        font-size: 18px;
+        margin-top: 7px;
+    }
+
+    .section06 .last_img img {
+        width: 60%;
+    }
+
+    /****** 고객후기 section06 end ******/
+
+    /* footer */
+    .footer .footer_contactus .call>span:nth-of-type(3) {
+        font-size: 22px !important;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 370px) {
+    .section02 .lunch_group_mo .lunch_group_left {
+        display: grid !important;
+        grid-template-columns: 120px 1fr !important;
+        column-gap: 20px !important;
+    }
+
+    .section02 .lunch_group_mo.salad .lunch_text .lunch_tit {
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_text {
+        min-width: 0 !important;
+        padding-left: 2px !important;
+    }
+
+    .section02 .lunch_group_mo .lunch_group_right {
+        flex: 0 0 46px !important;
+    }
+
+    .section02 .lunch_group_mo .cart_link img {
+        width: 30px !important;
+        height: auto !important;
+    }
+}
+
+.slider {
+    touch-action: pan-y;
+}
