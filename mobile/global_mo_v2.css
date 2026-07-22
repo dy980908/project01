@@ -33,16 +33,16 @@ body {
             width: 28px;
             height: 28px;
             background-color: var(--primary-brown);
-            -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-            mask-image: url("../public/images/icon/fe_bar.svg");
+            -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+            mask-image: url("./public/images/icon/fe_bar.svg");
         }
 
         header.scrolled .menu_btn {
             width: 28px;
             height: 28px;
             background-color: white;
-            -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-            mask-image: url("../public/images/icon/fe_bar.svg");
+            -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+            mask-image: url("./public/images/icon/fe_bar.svg");
         }
 
         /* 모바일 헤더 end */
@@ -415,8 +415,8 @@ body {
                 width: 28px;
                 height: 28px;
                 background-color: white;
-                -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-                mask-image: url("../public/images/icon/fe_bar.svg");
+                -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+                mask-image: url("./public/images/icon/fe_bar.svg");
             }
 
             .logo img {

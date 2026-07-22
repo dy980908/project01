@@ -502,15 +502,15 @@
       width: 28px;
       height: 28px;
       background-color: var(--primary-brown) !important;
-      -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-      mask-image: url("../public/images/icon/fe_bar.svg");
+      -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+      mask-image: url("./public/images/icon/fe_bar.svg");
   }
   header.scrolled .menu_btn {
       width: 28px;
       height: 28px;
       background-color: white !important;
-      -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-      mask-image: url("../public/images/icon/fe_bar.svg");
+      -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+      mask-image: url("./public/images/icon/fe_bar.svg");
   }
   .infomation_wrap {
       display: flex;

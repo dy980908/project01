@@ -6,7 +6,7 @@ header {
 }
 /* === SECTION 01 === */
 .section01--brandstory{
-  background-image: url("../public/images/brandstory/brand-visu.jpg");
+  background-image: url("./public/images/brandstory/brand-visu.jpg");
 }
 .section01 {
     margin-top: 80px;

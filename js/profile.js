@@ -78,7 +78,7 @@
   cancelBtn?.addEventListener('click', (e)=>{
     e.preventDefault();
     window.AppAlert.confirm({
-      title: '<img src="../public/images/icon/error.png" alt="에러">',
+      title: '<img src="./public/images/icon/error.png" alt="에러">',
       message: '수정 중인 내용을 모두 버리고&nbsp;<span>기존 정보로 되돌릴까요?</span>',
       okText: '되돌리기',
       cancelText: '계속 수정',
@@ -91,12 +91,12 @@
     const ok = saveChanges();
     if (ok) {
       window.AppAlert.info({
-        title: '<img src="../public/images/icon/success.svg" alt="완료">',
+        title: '<img src="./public/images/icon/success.svg" alt="완료">',
         message: '변경사항이 저장되었습니다.'
       });
     } else {
       window.AppAlert.info({
-        title: '<img src="../public/images/icon/error.png" alt="에러">',
+        title: '<img src="./public/images/icon/error.png" alt="에러">',
         message: '저장 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.'
       });
     }

@@ -16,7 +16,7 @@
 }
 /* === SECTION 01 === */
 .section01--lunchbox {
-    background-image: url("../public/images/lunchbox/lunchbox-visu.jpg");
+    background-image: url("./public/images/lunchbox/lunchbox-visu.jpg");
 }
 
 /*  === SECTION 02 === */
@@ -331,16 +331,16 @@
         width: 28px;
         height: 28px;
         background-color: white;
-        -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-        mask-image: url("../public/images/icon/fe_bar.svg");
+        -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+        mask-image: url("./public/images/icon/fe_bar.svg");
     }
 
     header.scrolled .menu_btn {
         width: 28px;
         height: 28px;
         background-color: white;
-        -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
-        mask-image: url("../public/images/icon/fe_bar.svg");
+        -webkit-mask-image: url("./public/images/icon/fe_bar.svg");
+        mask-image: url("./public/images/icon/fe_bar.svg");
     }
 
     .gnb_box .on {

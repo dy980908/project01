@@ -213,12 +213,12 @@
 
     /* 장바구니 hover */
     .cart_link img {
-        content: url("../public/images/icon/cart.svg");
+        content: url("./public/images/icon/cart.svg");
         transition: 0.3s ease;
     }
 
     .cart_link:hover img {
-        content: url("../public/images/icon/cart_hover.svg");
+        content: url("./public/images/icon/cart_hover.svg");
     }
 
     .section2_p {

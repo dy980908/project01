@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
 
   // index 페이지 예외 처리 (가장 먼저!)
-  if (path === "/" || path.endsWith("/index.html")) {
+  if (path === "/" || path.endsWith("./index.html")) {
     logoutGnb.style.display = "block";
     loginGnb.style.display  = "none";
     return; // 아래 조건들 실행 안하게 종료
