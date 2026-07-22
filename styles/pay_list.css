@@ -1,0 +1,1027 @@
+/****** 주문하기 입력창 section02 ******/
+.section02 {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 50px;
+    background-color: transparent;
+    min-height: initial;
+    position: relative;
+    z-index: 2;
+}
+.container { 
+    width: 100%;
+    max-width: initial; 
+}
+.infomation_wrap {
+    display: flex;
+    flex-direction: row;
+}
+.info_left{
+    width: 60%;
+}
+.info_right {
+    width: 40% !important;
+}
+.info_load {
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.info_title {
+    font-family: var(--font-pretendard-jp);
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.info_sub_title {
+    font-family: var(--font-pretendard-jp);
+    font-weight: 900px;
+    font-size: 2rem;
+}
+/* 달력 */
+/* ===== THEME: CSS 변수로 손쉽게 커스터마이징 ===== */
+:root {
+--cal-font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+--cal-bg: #ffffff;
+--cal-surface: #f6f7f9;
+--cal-text: #1f2937;
+--cal-muted: #6b7280;
+--cal-border: #e5e7eb;
+--cal-accent: #FF5117; /* 메인 포인트 색상 */
+--cal-accent-contrast: #ffffff;
+--cal-radius: 14px;
+--cal-shadow: 0 10px 30px rgba(2, 6, 23, .08);
+}
+
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    font-family: var(--cal-font); 
+    color: var(--cal-text); 
+    background: white; 
+}
+.container { 
+    margin: 0 auto; 
+    padding: 0 16px; 
+}
+p.lead { 
+    margin: 0 0 24px; 
+    color: var(--cal-muted); 
+}
+
+/* ===== 캘린더 비활성화 (과거) ===== */
+.day.past { 
+  filter: grayscale(18%);
+  opacity: .85;
+}
+/* 수량 그룹이 읽기 전용일 때 스타일 */
+.quantity_form.readonly {
+  opacity: .7;
+}
+.quantity_form.readonly .quantity_box button {
+  pointer-events: none;
+  opacity: .35;
+}
+.quantity_form.readonly input[readonly] {
+  color: #767676;
+  cursor: default;
+}
+.day.past:not(.disabled) { cursor: pointer; }
+
+/* 내용있을때 강조 */
+.day.has-order.selected {
+  border-color: transparent;
+  color: white;
+}
+.day.has-order:not(.selected) {
+  background: #ff511750;
+  border-color: transparent;
+  color: rgb(119, 50, 50);
+}
+.day.past.has-order:not(.selected) {
+  background: #ff511750;
+  border-color: transparent;
+  color: rgb(119, 50, 50);
+}
+/* ===== 공통 캘린더 프레임 ===== */
+.card { 
+    background: var(--cal-bg); 
+    border:1px solid var(--cal-border); 
+    border-radius: var(--cal-radius); 
+    width: auto;
+    padding: 20px; 
+    margin-bottom: 22px;
+}
+.order_title,
+.order_title_list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+.order_title_list {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--line-normal);
+    margin-bottom: 30px;
+}
+.order_title_list .title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.order_title img {
+    width: 40px;
+    height: 100%;
+    object-fit: contain;
+}
+.order_title_list img {
+    width: 30px;
+    height: 100%;
+    object-fit: contain;
+}
+.grid { display: grid; }
+.row { 
+    display:flex; 
+    align-items:center; 
+}
+
+.calendar { padding: 16px; }
+.cal-header { 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap: 8px; 
+}
+.cal-title { 
+    font-weight: 700; 
+    letter-spacing: .2px; 
+}
+.cal-nav { 
+    display:flex; 
+    gap: 6px; 
+}
+.btn { 
+    text-align: center;
+    justify-content: center;
+    appearance: none; 
+    background: var(--cal-surface); 
+    border: 1px solid var(--cal-border);
+    color: var(--label-alternative); 
+    border-radius: 40px; 
+    padding: 12px 30px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: .15s ease; 
+}
+.btn:hover { filter: brightness(0.98); }
+.cal-nav .btn-ghost { 
+    padding: 12px 18px;
+    background: transparent; 
+}
+.btn-primary { 
+    background: var(--cal-accent); 
+    color: var(--cal-accent-contrast); 
+    border-color: transparent; 
+}
+
+.weekday { 
+    color: var(--cal-muted); 
+    font-size: 12px; 
+    letter-spacing: .4px; 
+    text-transform: uppercase; 
+    text-align:center; 
+    padding: 8px 0; 
+}
+
+.day-grid { 
+    gap: 6px; 
+    grid-template-columns: repeat(7, minmax(0,1fr)); 
+    margin-top: 8px; 
+}
+.day { 
+    position: relative; 
+    aspect-ratio: 1 / 1; 
+    background: var(--cal-surface); 
+    border: 1px solid var(--cal-border); 
+    border-radius: 10px; 
+    display:flex; 
+    flex-direction: column;
+    align-items:flex-end; 
+    justify-content:flex-start;
+    padding:8px; cursor:pointer; 
+    transition: .15s ease; 
+}
+.day:hover { 
+    box-shadow: 0 0 0 2px var(--cal-accent) inset; 
+}
+.day .num { 
+    font-weight: 700; 
+    font-size: 13px; 
+}
+.day.muted { opacity: .45; }
+.day.today { 
+    outline: 2px solid var(--cal-accent); 
+    outline-offset: -2px; 
+}
+.day.selected { 
+    background: var(--cal-accent); 
+    color: var(--cal-accent-contrast); 
+    border-color: transparent; 
+}
+/* 달력 안 / 도시락 개수 */
+.num_group {
+    display:flex;
+    gap:4px;
+    margin-top:4px;
+    justify-content:flex-end;
+    flex-direction: column;
+    font-weight: 700;
+}
+.salad_num {
+    font-size:11px;
+    padding:2px 6px;
+    border-radius:8px;
+    background:#e0f2fe;
+    color:var(--primary-green);
+}
+.heat_num {
+    font-size:11px;
+    padding:2px 6px;
+    border-radius:8px;
+    background:#fee2e2;
+    color:var(--primary-orange);
+}
+/* 달력 안 / 도시락 개수  end*/
+.dots { 
+    position:absolute; 
+    left:8px; 
+    bottom:8px; 
+    display:flex; 
+    gap:4px; }
+.dot { 
+    width:6px; 
+    height:6px; 
+    border-radius: 50%; 
+    background: var(--cal-accent); 
+    opacity:.8; 
+}
+
+
+/* 이벤트 리스트 (우측 패널) */
+.radio_check .checkmark { pointer-events: none; }
+.quantity_form { display:flex; align-items:center; width:100%; }
+.quantity_box { margin-left:auto; display:inline-flex; gap:6px; align-items:center; }
+
+.layout { 
+    /* display: flex;  */
+    grid-template-columns: 1.1fr .9fr; 
+    gap: 20px; 
+}
+@media (max-width: 900px){ .layout { grid-template-columns: 1fr; } }
+
+
+.events-panel { 
+    padding: 16px; 
+    max-height: 560px; 
+    overflow:auto; 
+}
+.event { 
+    border:1px solid var(--cal-border); 
+    background: var(--cal-surface); 
+    border-radius: 12px; 
+    padding: 12px; 
+    margin-bottom: 10px; 
+}
+.event .badge { 
+    display:inline-block; 
+    font-size:11px; 
+    font-weight:700; 
+    background: var(--cal-accent); 
+    color: var(--cal-accent-contrast); 
+    padding:4px 8px; 
+    border-radius: 999px; 
+    margin-right: 6px; 
+}
+
+
+/* ===== 데이트피커 (Input + Popover) ===== */
+.picker-wrap { 
+    position: relative; 
+    width: 280px; 
+}
+.picker-input { 
+    width:100%; 
+    padding: 10px 12px; 
+    border:1px solid var(--cal-border); 
+    border-radius: 10px; 
+    background: var(--cal-bg); 
+    color: var(--cal-text); 
+    outline:none; 
+    box-shadow: var(--cal-shadow); 
+}
+.picker-pop { 
+    position:absolute; 
+    top: 52px; 
+    left:0; 
+    z-index: 50; 
+    width: 320px; 
+}
+.hidden { display:none; }
+
+
+/* 도움말 블록 */
+.tip { 
+    font-size: 12px; 
+    color: var(--cal-muted); 
+    margin-top: 8px; 
+}
+.swatch { 
+    display:inline-block; 
+    width: 14px; 
+    height: 14px; 
+    border-radius: 4px; 
+    border:1px solid var(--cal-border); 
+    vertical-align: -2px; 
+    margin-right: 6px; 
+}
+
+/* 수량선택 */
+.quantity_form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.quantity_box {
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+    margin-right: 40px;
+}
+.quantity_box button {
+    font-size: 2rem;
+    color: var(--label-neutral);
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.quantity_box input {
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+    transform: translateX(6px);
+}
+.menu_input {
+    margin-left: 10px;
+}
+/* 총 합계 */
+.order_card {
+    margin-bottom: 20px;
+    margin: 0 20px 20px 20px; 
+}
+.order_card .quantity_group .quantity_box input {
+    font-size: 1.6rem;
+}
+/* 정산내역 */
+.info_paylist {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.paylist_card_head,
+.paylist_card {
+    background-color: white;
+    border-radius: var(--cal-radius);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s;
+}
+.paylist_card_head:hover {
+    border: 1px solid var(--primary-orange);
+}
+.paylist_card {
+    margin-top: 20px;
+}
+.paylist_past .paylist_card_head {
+    background-color: var(--background-light);
+    transition: all 0.3s;
+    box-shadow: none; 
+}
+.paylist_past .paylist_card_head:hover {
+    border: 1px solid #00000000;
+}
+.paylist_past .process_check_btn {
+    background-color: var(--background-unable-btn);
+    color: var(--background-unable-text);
+    transition: all 0.3s;
+}
+.paylist_past .process_check_btn:hover {
+    background-color: var(--primary-orange);
+    color:white;
+}
+.pay {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.process_check_btn {
+    text-align: center;
+    background-color: var(--primary-orange);
+    padding: 12px 30px;
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.subtotal {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+}
+.actions {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.actions_in {
+    display: flex;
+    justify-content: right;
+}
+.actions_in button {
+    font-size: 3rem;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.actions_in button:hover {
+    opacity: 1;
+}
+.order_card_body {
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid var(--line-normal);
+}
+.quantity_group {
+    margin-bottom: 10px;
+}
+.order_card_body .row {
+    padding-bottom: 5px;
+}
+.qty {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.quantity_group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.empty {
+    text-align: center;
+    padding: 50px 0;
+}
+/* 정산내역-세부정보 */
+.paylist_card {
+    display: flex;
+    flex-direction: column;
+}
+.paylist_card li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line-normal);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.paylist_card li p {
+    padding-bottom: 5px;
+}
+.paylist_card_head input {
+    display: none;
+}
+.pay_date {
+    font-size: 1.6rem;
+    color: var(--label-alternative);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.pay_type {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.pay_qty {
+    font-size: 1.4rem;
+    color: var(--label-alternative);
+}
+.pay_day_total {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/* 정산내역-총 결제 금액 */
+.paylist_card_total_head {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+}
+.paylist_card_summary {
+    border-bottom: none !important; 
+}
+.paylist_card_summary div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.paylist_card_total {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.paylist_ext {
+    text-align: left;
+    font-size: 14px;
+    color: #767676;
+}
+/* 정산내역-세부정보 end */
+/****** 주문하기 입력창 section02 end ******/
+
+/****** 정산서 팝업창 css ******/
+/* 열고 닫기 */
+#invoiceOverlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(17, 24, 39, .45);
+    align-items: center; 
+    justify-content: center;
+    z-index: 9999;
+}
+#invoiceOverlay.is-open {
+    display: flex !important;
+    position: fixed; inset: 0;
+    background: rgba(17, 24, 39, .45);
+    align-items: center; 
+    justify-content: center;
+    z-index: 9999;
+}
+/* 열고 닫기 end */
+.invoice-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 20px 30px 20px 30px;
+    gap: 8px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+    overflow: hidden;
+    animation: alert-pop .16s ease-out;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+@keyframes alert-pop { 
+    from { transform: translateY(6px) scale(.98); opacity: .6; } 
+    to { transform: none; opacity: 1; } 
+}
+/* 인쇄용 스타일 */
+@media print {
+    @page { size: A4; margin: 0; }
+    body * { visibility: hidden; }
+    
+    #invoiceOverlay, #invoiceOverlay * { visibility: visible; }
+    #invoiceOverlay{ position: absolute; inset: 0; background: none !important; }
+    .preview-wrap {
+        margin:0 auto !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+    }
+    .invoice {
+        box-sizing: border-box;
+        width: 200mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        padding: 10mm 5mm !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        transform: none !important;
+        page-break-before: avoid !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        break-inside: avoid-page !important;
+        overflow: visible !important;
+    }
+    /* 4) 인쇄에 필요없는 UI 숨김 */
+    .invoice_download,
+    .page_move,
+    .invoice-actions { display: none !important; }
+
+    .invoice > img.print-fill,
+    .invoice .print-fill {
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        object-fit: contain;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+.preview-pane{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.preview-wrap {
+  position: relative;
+  width:  calc(210mm * var(--scale, .55));
+  height: calc(297mm * var(--scale, .55));
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background:#fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.invoice {
+    /* background-color: blue; */
+    position: absolute; inset: 0; 
+    width: 210mm; 
+    height: 297mm;  
+    transform-origin: top left;
+    transform: scale(var(--scale, .55));
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 20px;
+}
+/* (헤더)정산서 제목 */
+.invoice-title {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 24px 0 0 24px;
+}
+.invoice-title .invoice_month {
+    font-size: 22px;
+    font-weight: 800;
+}
+.invoice-title .for_name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 4px 0;
+}
+.invoice-title .ext {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 4px;
+}
+.invoice-head {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.invoice-head ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.invoice-head li p {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 6px;
+    margin: 6px 0;
+}
+.invoice-head ul li span:nth-child(1) {
+    display: inline-block;
+    width: 20%;
+    font-weight: 700;
+}
+.invoice-head ul li span:nth-child(2) {
+    width: 80%;
+    font-weight: 400;
+    margin-left: 10px;
+    word-break: normal;
+}
+/* (바디)정산서 표 */
+.invoice-body {
+    padding-bottom: 20px;
+    border-top: 2px solid #1f2937;
+}
+.invoice-body ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+}
+.inv_body_tit,
+.inv_body_con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+}
+.inv_body_tit li,.inv_body_con li{padding:10px 8px}
+.inv_body_tit{background:#f9fafb;font-weight:700}
+.inv_body_con:nth-child(even){background:#fcfcfd}
+
+/* (푸터)정산서 합계 */
+.invoice_footer {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding: 16px 24px 24px;
+    border-top: 2px solid #1f2937;
+}
+.invoice_footer .memo {flex:1;}
+.invoice_footer .meomo_tit{
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.invoice_footer .summary{min-width:280px;}
+.invoice_footer .summary ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.invoice_footer .summary ul:not(.total){
+    border-bottom: 1px dashed var(--line);
+    line-height: 200%;
+}
+.invoice_footer .summary .total {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.invoice_download{
+    padding: 10px 24px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--line);
+}
+/* 버튼 */
+.invoice-actions {
+    display: flex; 
+    gap: 8px; 
+    justify-content: center;
+}
+.invoice-btn {
+    appearance: none; 
+    background: #fff;
+    padding: 10px 40px; 
+    border-radius: 100px; 
+    font-size: 14px; 
+    cursor: pointer;
+    font-weight: 500;
+}
+.invoice-btn.primary { 
+    background: var(--primary-orange); 
+    color: #fff; 
+}
+.invoice-btn.primary:hover { filter: brightness(1.05); }
+
+.invoice_download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.invoice_download .loader_btn {
+    padding: 10px 40px;
+}
+.page_move {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+.move_btn {
+    color: var(--background-unable-text);
+    padding: 4px 14px ;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px rgba(0,0,0,.18);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.move_btn:hover {
+    background-color: var(--background-light);
+}
+.page {
+    padding: 6px;
+    cursor: pointer;
+}
+/****** 정산서 팝업창 css end ******/
+/****** 주문내역창 ******/
+.info_order {
+    padding: 16px;
+}
+.info_card_title p {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* 수정 (저장/닫기) */
+.change_actions {
+    margin-top: 14px; 
+    display: flex; 
+    justify-content: center;
+    gap: 8px; 
+    align-items: center;
+}
+/****** 주문내역창 end ******/
+
+/* === 인쇄 컬러 보존 강제 === */
+@media print {
+  html, body {
+    -webkit-print-color-adjust: exact !important; /* Chrome/Safari */
+            print-color-adjust: exact !important; /* 표준화 진행 중 */
+    color-adjust: exact !important;               /* 구버전 대응 */
+  }
+
+  #canvas,
+  #canvas * {
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+
+  .invoice,
+  .inv_body_tit,
+  .inv_body_con:nth-child(even),
+  .invoice_footer .summary ul:not(.total) {
+    background: #ffffff !important;
+  }
+  .inv_body_tit { background: #f3f4f6 !important; }
+  .inv_body_con:nth-child(even){ background:#fcfcfd !important; }
+
+  .invoice,
+  .invoice * {
+    box-shadow: none !important;
+    border-color: #1f2937 !important;
+  }
+
+  svg path { fill: #111111 !important; stroke: #111111 !important; }
+}
+
+/* 반응형 */
+@media (max-width: 1500px) {
+    .section02 {
+        width: auto;
+        height: 100%;
+        padding: 20px;
+    }
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .calendar {
+        padding: 0 0 16px 0;
+    }
+    .info_left,
+    .info_right {
+        width: 100% !important;
+    }
+    .infomation_wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    .menu_btn {
+        width: 28px;
+        height: 28px;
+        background-color: var(--primary-brown) !important;
+        -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
+        mask-image: url("../public/images/icon/fe_bar.svg");
+    }
+    header.scrolled .menu_btn {
+        width: 28px;
+        height: 28px;
+        background-color: white !important;
+        -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
+        mask-image: url("../public/images/icon/fe_bar.svg");
+    }
+    .gnb_box .on {
+        border-bottom: 5px solid var(--primary-orange);
+        transition: all 0.3s ease-in;
+    }
+}
+@media (max-width: 600px) {
+    .uploader {
+        height: auto;
+        padding: 80px 40px;
+    }
+}
+@media (max-width: 450px) {
+    .btn {
+        text-align: center;
+        justify-content: center;
+        appearance: none;
+        border: 1px solid var(--cal-border);
+        color: var(--label-alternative);
+        border-radius: 40px;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .15s ease;
+    }
+    .btn-primary {
+        background: var(--cal-accent);
+        color: var(--cal-accent-contrast);
+        border-color: transparent;
+    }
+    .paylist_card_head, .paylist_card {
+        background-color: white;
+        border-radius: var(--cal-radius);
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 1px 5px 10px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: all 0.3s;
+    }
+}
+@media (max-width: 375px) {
+    .section03 {padding: 0 !important;}
+    .infomation_wrap {
+        gap: 20px;
+    }
+    .card {border: initial;}
+    .events-panel {border: 1px solid var(--cal-border);}
+    .day {
+        border-radius: 4px;
+        width: auto;
+    }
+    .day-grid {
+        gap: 2px;
+    }
+    #eventList div {font-size: 1.4rem;}
+    .process_check_btn {
+        font-size: 1.2rem !important;
+    }
+    .pay_date {font-size: 1.2rem;}
+    .pay_type {font-size: 1.6rem;}
+    .pay_qty  {font-size: 1.2rem;}
+    .paylist_card_total_head {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--primary-orange);
+    }
+    .paylist_card_total {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+    .paylist_ext {
+        text-align: right;
+        font-size: 12px;
+        color: #767676;
+    }
+    .paylist_past .process_check_btn {
+        font-size: 12px;
+    }
+    .process_check_btn {
+        text-align: center;
+        background-color: var(--primary-orange);
+        padding: 12px 20px;
+        border-radius: 40px;
+        color: white;
+        font-weight: 600;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,553 @@
+.tip {display: none !important;}
+/****** 정보수정 입력창 section02 ******/
+.section01 {
+  text-shadow: none;
+}
+.login_btn {
+    color: var(--primary-brown);
+    border: 1px solid var(--primary-brown);
+}
+.section02 {
+    background-color: initial;
+    width: 1080px;
+    padding: 0 10px;
+    padding-bottom: 40px;
+}
+.order_visual_tit p {
+  color: var(--primary-brown);
+}
+.infomation_wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.info_left {
+    width: 50%;
+}
+.info_right {
+    width: 50%;
+}
+.info_load {
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.info_title {
+    font-family: var(--font-pretendard-jp);
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-top: 20px;
+}
+.info_sub_title {
+    font-family: var(--font-pretendard-jp);
+    font-weight: 900px;
+    font-size: 2rem;
+}
+
+/* 입력창 */
+.input_group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+}
+.input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input_tit {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: 10px;
+}
+.input_tit h3 {
+    font-weight: 600;
+}
+.input_tit span {
+    background-color: rgba(255, 81, 23, 0.1);
+    padding: 4px 10px;
+    border-radius: 24px;
+    color: var(--primary-orange);
+    font-size: 14px;
+    font-weight: 600;
+}
+.input_tit p {
+    font-size: 1.4rem;
+    color: var(--label-alternative);
+}
+.input_tit p>span {
+    color: var(--primary-orange);
+    font-size: 1.4rem;
+    border-radius: 0;
+    font-weight: 300;
+    padding: 0;
+    background-color: rgba(255, 81, 23, 0);
+}
+/* 입력창-플레이스홀더 */
+.input_form {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+.input_con {
+    width: 100%;
+    background-color: white;
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 1.8rem;
+}
+/* 가입경로 체크버튼 */
+.checkbox_check {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    padding-left: 28px;
+}
+.checkbox_check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+}
+.checkbox_check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox_check input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+.checkbox_check .checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #888;
+    border-radius: 20px;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+.checkbox_check input[type="checkbox"]:checked ~ .checkmark {
+    background-color: var(--primary-orange);
+    border-color: var(--primary-orange);
+}
+.checkbox_check input[type="checkbox"]:checked ~ .checkmark::after {
+    display: block;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.checkbox_check .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox_check input[type="text"] {
+    width: 100%;
+    background-color: white;
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 1.6rem;
+}
+.checkbox_check input[type="text"]:disabled {
+    background-color: var(--background-light);
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 1.6rem;
+}
+ /* 주문 입력창:hover 기능 */
+#friend_input:focus {
+  background-color: white;
+  border: 1px solid var(--primary-orange);
+  box-sizing: border-box;
+}
+/* 주문 입력창:hover 기능 end */
+.address_btn a {
+    padding: 14px;
+    border: 1px solid var(--line-normal);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.input_form label {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+.cancel {
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--background-unable-text);
+    background-color: var(--background-unable-btn);
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.submit {
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--primary-orange);
+    border: 1px solid var(--primary-orange);
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 40px 0;
+}
+.submit:hover {
+    background-color:var(--primary-orange);
+    color: white;
+}
+.join {
+    width: 100%;
+    font-size: 1.8rem;
+    color: white;
+    background-color: var(--primary-orange);
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 40px 0 10px 0;
+}
+.join:hover {
+    background-color:var(--primary-brown);
+    color: white;
+}
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-orange);
+  user-select: none;
+  -webkit-user-select: none; 
+  font-weight: 500;
+}
+/* 기본 비활성화 css */
+/* 영역 배경 및 레이아웃 */
+.form_week {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 81, 23, 0.1);
+  padding: 20px 40px;
+}
+
+/* 기본 라벨/텍스트 스타일 */
+.form_week label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transform: translateX(-10px);
+}
+
+/* 네이티브 라디오 숨기기 (디자인 커스텀 시) */
+.form_week input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 커스텀 텍스트(또는 버튼모양) */
+.form_week label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #bbb;
+  border-radius: 20px;
+  color: #000;
+  transition: .2s ease;
+}
+
+/* 선택됨(checked) 상태 */
+.form_week input:checked + span {
+  border-color: #ff5117;
+  background: #ff5117;
+  color: #fff;
+}
+
+/* ⛔ 비활성화 상태: input을 기준으로 형제 span 스타일링 */
+.form_week input:disabled + span {
+  color: #aaa;
+  border-color: #ddd;
+  background: #f5f5f5;
+  filter: grayscale(40%);
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+/* 결제주기 */
+.pay_input {
+    border: 1px solid var(--line-normal);
+    border-radius: 4px;
+    padding-top: 20px;
+}
+.input_form_column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 20px 0 20px;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.input_form_column .checkbox_check:last-child {
+    grid-column: 1 / -1; /* 1번 칸부터 마지막 칸까지 = 전체 너비 */
+}
+.input_form_column_week {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-left: 20px;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+/* 영역 배경 및 레이아웃 */
+.form_week {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 81, 23, 0.1);
+  padding: 20px 40px;
+}
+
+/* 기본 라벨/텍스트 스타일 */
+.form_week label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transform: translateX(-10px);
+}
+
+/* 네이티브 라디오 숨기기 (디자인 커스텀 시) */
+.form_week input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 커스텀 텍스트(또는 버튼모양) */
+.form_week label span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #bbb;
+  border-radius: 20px;
+  color: #000;
+  transition: .2s ease;
+}
+
+/* 선택됨(checked) 상태 */
+.form_week input:checked + span {
+  border-color: #ff5117;
+  background: #ff5117;
+  color: #fff;
+}
+
+/* ⛔ 비활성화 상태: input을 기준으로 형제 span 스타일링 */
+.form_week input:disabled + span {
+  color: #aaa;
+  border-color: #ddd;
+  background: #f5f5f5;
+  filter: grayscale(40%);
+  cursor: not-allowed;
+  opacity: 0.7;
+  pointer-events: none;
+}
+/****** 정보수정 입력창 section02 end ******/
+/****** 주문내역창 end ******/
+/* ****************** 알림창 Overlay / Modal ****************** */
+#alertOverlay[hidden]{ display:none; }
+#alertOverlay{
+  position: fixed; inset: 0;
+  display: flex; align-items: center; 
+  justify-content: center;
+  background: rgba(17, 24, 39, .45);
+  z-index: 9999;
+  opacity: 0; pointer-events: none;
+  transition: opacity .16s ease;
+}
+#alertOverlay.open{ opacity: 1; pointer-events: auto; }
+
+#alertOverlay .sheet{
+  width: min(420px, calc(100% - 40px));
+  background: #fff;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+#alertOverlay header{
+  display:flex; 
+  justify-content: center;
+  align-items:center; 
+  padding: 30px 16px 7px 16px;
+  box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0);
+}
+#alertOverlay .title{ font-weight: 800; font-size: 16px; }
+#alertOverlay .body{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 16px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #111;
+}
+#alertOverlay .body span{
+    font-weight: 700;
+    color: var(--primary-orange);
+}
+#alertOverlay .actions{
+  display: flex; 
+  gap: 8px; 
+  justify-content: center;
+  padding: 30px 16px;
+}
+#alertOverlay .icon {
+    width: 50px;
+    line-height: 1;
+}
+#alertOverlay .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/* 버튼 프리셋 */
+#alertOverlay .btn{ 
+  color: #121212;
+  border: 1px solid var(--line-normal);
+  border-radius: 100px;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#alertOverlay .btn.primary{ 
+  background: var(--primary-orange); 
+  color:#fff;
+  border: 1px solid transparent
+}
+#alertOverlay .btn.danger{ 
+  background:#111; 
+  color:var(--primary-green); 
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+#alertOverlay .btn.danger:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+/* ****************** 알림창 Overlay / Modal end ****************** */
+@media (max-width: 1500px) {
+  .section01 {
+      width: 80%;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding-bottom: 40px;
+  }
+  .section02 {
+    background-color: initial;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 40px;
+  }
+  .infomation_wrap {
+      width: 80%;
+      margin: 0 auto;
+  }
+  .join {
+      width: 80%;
+      font-size: 1.8rem;
+      color: white;
+      background-color: var(--primary-orange);
+      padding: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 40px 0 10px 0;
+  }
+  .login_btn_mo,
+  header.scrolled .login_btn_mo {
+    color: var(--primary-brown);
+    border: 1px solid var(--primary-brown);
+  }
+}
+@media (max-width: 800px) {
+  .menu_btn {
+      width: 28px;
+      height: 28px;
+      background-color: var(--primary-brown) !important;
+      -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
+      mask-image: url("../public/images/icon/fe_bar.svg");
+  }
+  header.scrolled .menu_btn {
+      width: 28px;
+      height: 28px;
+      background-color: white !important;
+      -webkit-mask-image: url("../public/images/icon/fe_bar.svg");
+      mask-image: url("../public/images/icon/fe_bar.svg");
+  }
+  .infomation_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .info_left,
+  .info_right {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .info_title {
+    font-family: var(--font-pretendard-jp);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  .input_tit h3 {font-size: 1.6rem;}
+  .input_tit span {
+    background-color: rgba(255, 81, 23, 0.1);
+    padding: 2px 6px;
+    border-radius: 24px;
+    color: var(--primary-orange);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .input_tit p {
+    font-size: 1.2rem;
+    color: var(--label-alternative);
+  }
+  .form_week {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px 10px;
+    background-color: rgba(255, 81, 23, 0.1);
+    padding: 20px 10px 20px 30px !important;
+  }
+
+}
