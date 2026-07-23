@@ -349,6 +349,9 @@ section{
   background: #f5f5f5;
 }
 
+.kakao_box01 .popup{
+  z-index: 99;
+}
 /* box01끝 */
 
 
@@ -357,6 +360,7 @@ section{
   height: auto;
   padding: 0;
   margin-top: -100px;
+  z-index: -999;
 }
 
 .menu_banner_slider {
@@ -763,9 +767,18 @@ section{
 
 }
 
-/* =========================
-   작은 모바일
-========================= */
+@media (max-width: 600px) {
+  .news_popup_close {
+    top: 20px;   /* ⬅ 조금 더 아래로 */
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+}
+
+
 
 /* =========================
    480px
@@ -975,4 +988,33 @@ section{
     font-size: 27px;
   }
 
+}
+
+
+/* 팝업 이미지 기본 */
+.news_popup {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+/* 확대 상태 */
+.news_popup.zoomed {
+  transform: scale(1.8); /* 원하는 만큼 조절 (1.5~2 추천) */
+  cursor: zoom-out;
+}
+#newsPopupImg {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+#newsPopupImg.zoomed {
+  transform: scale(2);
+  transition: transform 0.25s ease-out;
+}
+
+#newsPopupImg {
+  cursor: url('../public/images/kakao/cursor.png'), auto;
+}
+.news_popup {
+  cursor: url('../public/images/kakao/cursor.png'), auto;
 }
