@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     `,
     companyInfo: `
-      <div>본 사이트는</div>
-      <div> 실제 서비스가 아닌,</div>
+      <div>본 사이트는 실제 서비스가 아닌,</div>
       <div>포트폴리오 목적으로 제작된 데모 페이지입니다.</div>
     `,
     copyright: ""
