@@ -659,7 +659,7 @@ header.scrolled .gnb_btn a:hover,
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  --icon: url("/public/images/icon/link-contact_brown.png");
+  --icon: url("./public/images/icon/link-contact_brown.png");
 }
 .contact_btn a:hover img {
   transform: translateX(100px);
