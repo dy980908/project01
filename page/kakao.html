@@ -40,9 +40,6 @@
   <header class="gnb_logout">
     <nav class="gnb">
       <input type="checkbox" name="menu_btn" id="hamburger_btn_logout">
-      <div class="menu_btn">
-        <label for="hamburger_btn_logout"></label>
-      </div>
       <div class="logo">
         <a href="https://dy980908.github.io/project01/index.html">
           <img src="../public/images/logo/bobonda_line.svg" alt="헤더로고이미지" class="logo01">
@@ -239,30 +236,30 @@
 
     <ul class="news_list">
 
-      <li class="news_item" data-popup-image="../public/images/news/news_detail01.jpg">
+      <li class="news_item" data-popup-image="../public/images/kakao/news_thumb02.jpg">
         <!-- 썸네일 -->
 
         <button type="button" class="news_open_btn">
           <span class="news_thumb">
-            <img src="../public/images/news/news_thumb01.jpg" alt="부산 행사 도시락 납품 후기">
-          </span>
-
-          <span class="news_text">
-            [식단표 사이즈] 플랫폼별 맞춤 식단표 디자인 적용!
-          </span>
-        </button>
-      </li>
-
-      <li class="news_item" data-popup-image="../public/images/news/news_detail02.jpg">
-        <!-- 썸네일 -->
-
-        <button type="button" class="news_open_btn">
-          <span class="news_thumb">
-            <img src="../public/images/news/news_thumb02.jpg" alt="밥온다 직원 원픽 맛집">
+            <img src="../public/images/kakao/news_item02.jpg" alt="">
           </span>
 
           <span class="news_text">
             [카카오 채널] 안내 이미지 콘텐츠 제작
+          </span>
+        </button>
+      </li>
+
+      <li class="news_item" data-popup-image="../public/images/kakao/news_thumb01.jpg">
+        <!-- 썸네일 -->
+
+        <button type="button" class="news_open_btn">
+          <span class="news_thumb">
+            <img src="../public/images/kakao/news_item01.jpg" alt="">
+          </span>
+
+          <span class="news_text">
+            [식단표 사이즈] 플랫폼별 맞춤 식단표 디자인 적용!
           </span>
         </button>
       </li>
@@ -616,6 +613,32 @@
   </script>
 
   <!-- box3 -->
+
+
+
+<script>
+  const newsPopupImg = document.getElementById('newsPopupImg');
+
+  if (newsPopupImg) {
+    newsPopupImg.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      const rect = this.getBoundingClientRect();
+
+      // 클릭 위치를 %로 계산
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      // 클릭 위치를 기준으로 확대
+      this.style.transformOrigin = `${x}% ${y}%`;
+
+      this.classList.toggle('zoomed');
+    });
+  }
+</script>
+
+</body>
+</html>
 </body>
 
 </html>
