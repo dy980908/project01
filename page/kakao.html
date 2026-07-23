@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>밥온다 : 문의하기</title>
+  <meta property="og:site_name" content="밥온다-문의하기">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../public/images/icon/favicon_icon.ico" type="image/x-icon">
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="../styles/global_v2.css">
+  <link rel="stylesheet" href="../mobile/global_mo_v2.css">
+  <link rel="stylesheet" href="../styles/font.css">
+  <link rel="stylesheet" href="../styles/kakao.css">
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/global_v2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="../js/footer.js"></script>
+
+  <!-- font -->
+  <!-- Malangmalang -->
+  <link rel="preload" href="../public/font/Malangmalang/MalangmalangR.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/font/Malangmalang/MalangmalangB.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Hakgyoansim -->
+  <link rel="preload" href="../public/font/Hakgyoansim/HakgyoansimB.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../public/font/Hakgyoansim/HakgyoansimR.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+
+<body>
+  <aside class="side_button">
+    <div class="side_btn top_btn">
+      <img src="../public/images/icon/link-top.png" alt="탑버튼">
+    </div>
+  </aside>
+
+  <header class="gnb_logout">
+    <nav class="gnb">
+      <input type="checkbox" name="menu_btn" id="hamburger_btn_logout">
+      <div class="menu_btn">
+        <label for="hamburger_btn_logout"></label>
+      </div>
+      <div class="logo">
+        <a href="https://dy980908.github.io/project01/index.html">
+          <img src="../public/images/logo/bobonda_line.svg" alt="헤더로고이미지" class="logo01">
+          <img src="../public/images/logo/bobonda_line.svg" alt="헤더로고이미지" class="logo02">
+        </a>
+      </div>
+      <!-- logo end -->
+
+      </div>
+    </nav>
+  </header>
+  <!-- 헤더 -->
+
+
+  <section class="kakao_box01">
+    <div class="profile_head">
+      <span class="profile_image">
+        <img src="../public/images/logo/bobonda_color.svg">
+      </span>
+      <div class="info_profile">
+        <div class="area_name">
+          <strong class="tit_name">밥온다</strong>
+        </div>
+        <span class="txt_friends">친구 7,777</span>
+      </div>
+      <div class="util_profile">
+        <a href="">
+          <button type="button" class="btn_util_gray" title="1:1 채팅하기">
+            <span class="icon_comm icon_chat_16"><img src="../public/images/icon/kakao_talk.png"></span>
+          </button></a>
+        <button type="button" class="btn_util_gray" title="채널 추가하기">
+          <span class="icon_comm icon_channel_check"><img src="../public/images/icon/kakao_ch.png"></span>
+        </button>
+      </div>
+    </div>
+    <!-- 프로필헤드 -->
+
+    <div class="item_desc">Every day, Special day ! 매일이 스페셜데이
+      <br>오늘도 새로운 맛 밥온다 !
+    </div>
+    <!-- 프로필소개 -->
+
+    <h5>| 식단표 디자인모음</h5>
+
+    <div class="slider_wrap">
+      <button class="slide_btn prev">&lt;</button>
+      <ul class="profile_box">
+        <li><img src="../public/images/menu/bob_menu_20260716.jpg"></li>
+        <li><img src="../public/images/menu/ful_menu_20260716.jpg"></li>
+        <li><img src="../public/images/menu/bob01.jpg"></li>
+        <li><img src="../public/images/menu/ful01.jpg"></li>
+        <li><img src="../public/images/menu/bob02.jpg"></li>
+        <li><img src="../public/images/menu/ful02.jpg"></li>
+        <li><img src="../public/images/menu/bob03.jpg"></li>
+        <li><img src="../public/images/menu/ful03.jpg"></li>
+        <li><img src="../public/images/menu/bob04.jpg"></li>
+        <li><img src="../public/images/menu/ful04.jpg"></li>
+        <li><img src="../public/images/menu/bob05.jpg"></li>
+        <li><img src="../public/images/menu/ful05.jpg"></li>
+      </ul>
+
+      <button class="slide_btn next">&gt;</button>
+    </div>
+
+    <!-- 팝업 -->
+    <div class="popup" id="popup">
+      <img id="popupImg">
+    </div>
+    <!-- 식단표 이미지모음 -->
+
+    <div class="box01_gray">
+      <ul class="info_list">
+
+        <!-- 영업시간 -->
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </span>
+          <span class="txt"><strong>영업중</strong> 09:00 ~ 18:30</span>
+        </li>
+
+        <!-- 주소 -->
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10z" />
+              <circle cx="12" cy="11" r="2.5" />
+            </svg>
+          </span>
+          <span class="txt">부산 부산진구 000로 000길</span>
+        </li>
+
+        <!-- 서비스 -->
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="7" width="18" height="13" rx="2" />
+              <path d="M16 3v4M8 3v4" />
+            </svg>
+          </span>
+          <span class="txt">배달도시락 | 블로그 104</span>
+        </li>
+
+        <!-- 비용 -->
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12h6M12 9v6" />
+            </svg>
+          </span>
+          <span class="txt">본 사이트는 실제 서비스가 아닌 포트폴리오용으로 제작된 데모 페이지 입니다.</span>
+        </li>
+
+      </ul>
+    </div>
+    <!-- 버튼 -->
+    <div class="btn_group">
+
+      <button class="action_btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2
+        19.8 19.8 0 0 1-8.6-3.1
+        19.5 19.5 0 0 1-6-6
+        19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4 2h3
+        a2 2 0 0 1 2 1.7
+        12.7 12.7 0 0 0 .7 2.8
+        2 2 0 0 1-.5 2.1L8 9
+        a16 16 0 0 0 6 6l.4-.3
+        a2 2 0 0 1 2.1-.5
+        12.7 12.7 0 0 0 2.8.7
+        A2 2 0 0 1 22 16.9z" />
+        </svg>
+        전화하기
+      </button>
+
+      <button class="action_btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10z" />
+          <circle cx="12" cy="11" r="2.5" />
+        </svg>
+        길찾기
+      </button>
+
+      <button class="action_btn">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 12l18-9-9 18-2-7-7-2z" />
+        </svg>
+        카카오네비
+      </button>
+
+    </div>
+  </section>
+
+  <!-- section01 e -->
+
+  <section class="kakao_box02">
+
+    <div class="menu_banner_slider">
+
+      <div class="menu_banner_view">
+        <ul class="menu_banner_track">
+          <!-- 실제 이미지 -->
+          <li class="menu_banner_item">
+            <img src="../public/images/menu/식단표(카카오톡).jpg" alt="밥온다 이번 주 식단표">
+          </li>
+
+          <li class="menu_banner_item">
+            <img src="../public/images/menu/식단표_샐러드(카카오톡).jpg" alt="풀온다 이번 주 식단표">
+          </li>
+        </ul>
+      </div>
+
+      <button type="button" class="menu_banner_btn menu_banner_prev" aria-label="이전 이미지">
+        &#10094;
+      </button>
+
+      <button type="button" class="menu_banner_btn menu_banner_next" aria-label="다음 이미지">
+        &#10095;
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- section02 e -->
+
+  <section class="kakao_box03">
+
+    <h5 class="news_title">| 식단표 작업물</h5>
+
+    <ul class="news_list">
+
+      <li class="news_item" data-popup-image="../public/images/news/news_detail01.jpg">
+        <!-- 썸네일 -->
+
+        <button type="button" class="news_open_btn">
+          <span class="news_thumb">
+            <img src="../public/images/news/news_thumb01.jpg" alt="부산 행사 도시락 납품 후기">
+          </span>
+
+          <span class="news_text">
+            [식단표 사이즈] 플랫폼별 맞춤 식단표 디자인 적용!
+          </span>
+        </button>
+      </li>
+
+      <li class="news_item" data-popup-image="../public/images/news/news_detail02.jpg">
+        <!-- 썸네일 -->
+
+        <button type="button" class="news_open_btn">
+          <span class="news_thumb">
+            <img src="../public/images/news/news_thumb02.jpg" alt="밥온다 직원 원픽 맛집">
+          </span>
+
+          <span class="news_text">
+            [카카오 채널] 안내 이미지 콘텐츠 제작
+          </span>
+        </button>
+      </li>
+
+    </ul>
+
+    <button type="button" class="news_more_btn"
+      onclick="location.href='https://dy980908.github.io/project01/index.html'">
+      웹사이트 보러가기
+    </button>
+  </section>
+  <!-- section03 e -->
+
+
+  <!-- SECTION 03 게시글 이미지 팝업 -->
+  <div class="news_popup" id="newsPopup">
+
+    <div class="news_popup_content">
+
+      <button type="button" class="news_popup_close" id="newsPopupClose" aria-label="팝업 닫기">
+        ×
+      </button>
+
+      <img id="newsPopupImg" src="" alt="게시글 상세 이미지">
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+    /* =========================
+       기본 요소
+    ========================= */
+    const images = document.querySelectorAll('.profile_box img');
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popupImg');
+
+    const box = document.querySelector('.profile_box');
+    const prevBtn = document.querySelector('.slide_btn.prev');
+    const nextBtn = document.querySelector('.slide_btn.next');
+    const sliderBtns = document.querySelectorAll('.slide_btn');
+
+    let currentIndex = 0;
+
+    /* =========================
+       공통 닫기 함수 (🔥 핵심)
+    ========================= */
+    function closePopup() {
+      popup.classList.remove('active');
+      sliderBtns.forEach(btn => btn.style.display = 'block');
+      updateButtons();
+    }
+
+    /* =========================
+       이미지 클릭 → 팝업 열기
+    ========================= */
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        popup.classList.add('active');
+        popupImg.src = img.src;
+        currentIndex = index;
+
+        // 👉 슬라이드 버튼 숨기기
+        sliderBtns.forEach(btn => btn.style.display = 'none');
+      });
+    });
+
+    /* =========================
+       팝업 닫기 (배경 클릭 유지)
+    ========================= */
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        closePopup();
+      }
+    });
+
+    /* =========================
+       🔥 추가 기능 1: 이미지 클릭 시 닫기
+    ========================= */
+    popupImg.addEventListener('click', () => {
+      closePopup();
+    });
+
+    /* =========================
+       🔥 추가 기능 2: ESC 키로 닫기
+    ========================= */
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePopup();
+      }
+    });
+
+    /* =========================
+       슬라이드 이동
+    ========================= */
+    nextBtn.addEventListener('click', () => {
+      box.scrollBy({
+        left: box.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      box.scrollBy({
+        left: -box.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    /* =========================
+       버튼 숨김/표시 로직
+    ========================= */
+    function updateButtons() {
+      const scrollLeft = box.scrollLeft;
+      const maxScroll = box.scrollWidth - box.clientWidth;
+
+      if (scrollLeft <= 0) {
+        prevBtn.style.display = 'none';
+      } else {
+        prevBtn.style.display = 'block';
+      }
+
+      if (scrollLeft >= maxScroll - 1) {
+        nextBtn.style.display = 'none';
+      } else {
+        nextBtn.style.display = 'block';
+      }
+    }
+
+    /* =========================
+       스크롤 시 버튼 체크
+    ========================= */
+    box.addEventListener('scroll', updateButtons);
+
+    /* =========================
+       최초 실행
+    ========================= */
+    updateButtons();
+  </script>
+  <!-- box1 -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.querySelector('.menu_banner_slider');
+      const track = slider?.querySelector('.menu_banner_track');
+      const prevButton = slider?.querySelector('.menu_banner_prev');
+      const nextButton = slider?.querySelector('.menu_banner_next');
+
+      if (!slider || !track || !prevButton || !nextButton) return;
+
+      const originalSlides = Array.from(
+        track.querySelectorAll('.menu_banner_item')
+      );
+
+      if (originalSlides.length < 2) return;
+
+      /* 무한 반복을 위한 앞뒤 복제 */
+      const firstClone = originalSlides[0].cloneNode(true);
+      const lastClone =
+        originalSlides[originalSlides.length - 1].cloneNode(true);
+
+      firstClone.classList.add('clone');
+      lastClone.classList.add('clone');
+
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, originalSlides[0]);
+
+      const slides = track.querySelectorAll('.menu_banner_item');
+
+      let currentIndex = 1;
+      let autoSlideTimer;
+      let isMoving = false;
+
+      /* 첫 번째 실제 이미지 위치 */
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      requestAnimationFrame(() => {
+        track.style.transition = 'transform 0.6s ease';
+      });
+
+      function moveSlide() {
+        isMoving = true;
+
+        track.style.transition = 'transform 0.6s ease';
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      function nextSlide() {
+        if (isMoving) return;
+
+        currentIndex += 1;
+        moveSlide();
+      }
+
+      function prevSlide() {
+        if (isMoving) return;
+
+        currentIndex -= 1;
+        moveSlide();
+      }
+
+      /* 끝에 도달하면 보이지 않게 실제 이미지로 이동 */
+      track.addEventListener('transitionend', () => {
+        if (slides[currentIndex].classList.contains('clone')) {
+          track.style.transition = 'none';
+
+          if (currentIndex === slides.length - 1) {
+            currentIndex = 1;
+          } else if (currentIndex === 0) {
+            currentIndex = slides.length - 2;
+          }
+
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              track.style.transition = 'transform 0.6s ease';
+            });
+          });
+        }
+
+        isMoving = false;
+      });
+
+      /* 자동 슬라이드 */
+      function startAutoSlide() {
+        stopAutoSlide();
+
+        autoSlideTimer = setInterval(() => {
+          nextSlide();
+        }, 4000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideTimer);
+      }
+
+      nextButton.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+      });
+
+      prevButton.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+      });
+
+      /* 마우스를 올리면 자동 이동 잠시 정지 */
+      slider.addEventListener('mouseenter', stopAutoSlide);
+      slider.addEventListener('mouseleave', startAutoSlide);
+
+      /* 브라우저 탭을 벗어나면 정지 */
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopAutoSlide();
+        } else {
+          startAutoSlide();
+        }
+      });
+
+      startAutoSlide();
+    });
+  </script>
+
+  <!-- box2 -->
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const newsItems =
+        document.querySelectorAll('.news_item');
+
+      const newsPopup =
+        document.getElementById('newsPopup');
+
+      const newsPopupImg =
+        document.getElementById('newsPopupImg');
+
+      const newsPopupClose =
+        document.getElementById('newsPopupClose');
+
+
+      /* 게시글 클릭 → 상세 이미지 열기 */
+      newsItems.forEach((item) => {
+
+        const openButton =
+          item.querySelector('.news_open_btn');
+
+        const detailImage =
+          item.dataset.popupImage;
+
+        openButton.addEventListener('click', () => {
+
+          if (!detailImage) return;
+
+          newsPopupImg.src = detailImage;
+          newsPopup.classList.add('active');
+
+          /* 팝업을 열었을 때 뒤쪽 페이지 스크롤 방지 */
+          document.body.style.overflow = 'hidden';
+
+        });
+
+      });
+
+
+      /* 팝업 닫기 공통 함수 */
+      function closeNewsPopup() {
+
+        newsPopup.classList.remove('active');
+        newsPopupImg.src = '';
+
+        document.body.style.overflowX = 'hidden';
+        document.body.style.overflowY = 'auto';
+
+      }
+
+
+      /* X 버튼 */
+      newsPopupClose.addEventListener('click', closeNewsPopup);
+
+
+      /* 검은 배경 클릭 */
+      newsPopup.addEventListener('click', (event) => {
+
+        if (event.target === newsPopup) {
+          closeNewsPopup();
+        }
+
+      });
+
+
+      /* ESC 키 */
+      document.addEventListener('keydown', (event) => {
+
+        if (
+          event.key === 'Escape' &&
+          newsPopup.classList.contains('active')
+        ) {
+          closeNewsPopup();
+        }
+
+      });
+
+    });
+  </script>
+
+  <!-- box3 -->
+</body>
+
+</html>
