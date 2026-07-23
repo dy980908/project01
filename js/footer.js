@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔽 SNS 링크 데이터
   const snsLinks = [
     {
-      href: "",
+      href: "https://dy980908.github.io/project01/page/kakao.html",
       imgSrc: "../public/images/icon/naverblog_icon.svg",
       alt: "네이버 블로그"
     },
     {
-      href: "",
+      href: "https://dy980908.github.io/project01/page/kakao.html",
       imgSrc: "../public/images/icon/instagram_icon.svg",
       alt: "인스타그램"
     },
